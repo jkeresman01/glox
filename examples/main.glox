@@ -1,0 +1,11 @@
+var name "Milica"
+var age = 42
+
+print name
+print age
+
+if(age > 100) {
+    print (name + " probably dead")
+} else {
+    print (name + " mostl likely alive")
+}

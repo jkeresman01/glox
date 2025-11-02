@@ -3,10 +3,10 @@ package main
 //NOTE: defined on pages 40 - 41
 
 import (
-    "bufio"
-    "fmt"
-    "io/ioutil"
-    "os"
+	"bufio"
+	"fmt"
+	"io/ioutil"
+	"os"
 )
 
 var hadError = false
@@ -46,6 +46,13 @@ func runPrompt() {
 }
 
 func run(source string) {
+	scaner := NewScanner(source)
+	tokens := scaner.ScanTokens()
+
+	for _, token := range tokens {
+		fmt.Println(token)
+	}
+
     fmt.Println("You entered:", source)
 }
 
